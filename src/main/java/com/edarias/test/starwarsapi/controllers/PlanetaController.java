@@ -39,5 +39,10 @@ public class PlanetaController {
     public void deletarPlanetaPorId(@PathVariable(value = "id") Integer id){
         planetaRepository.deleteById(id);
     }
-    
+
+    @GetMapping(value = "/planetas/{name}")
+    public Planeta listarPlanetaPorNome(@PathVariable(value = "name") String name){
+        return planetaRepository.findPlanetaByName(name);
+    }
+
 }
