@@ -1,0 +1,27 @@
+db.runCommand({
+  collMod: "starwars",
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["id", "name", "climate", "terrain", "films"],
+      properties: {
+
+       id: {
+            bsonType: "long"
+       },
+       name: {
+            bsonType: "string"
+       },
+       climate: {
+            bsonType: "string"
+       },
+       terrain: {
+            bsonType: "string"
+       },
+       films: {
+          bsonType: "long"
+        }
+      }
+    }
+  }
+});

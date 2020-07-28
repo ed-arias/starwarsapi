@@ -40,7 +40,7 @@ public class PlanetaController {
         planetaRepository.deleteById(id);
     }
 
-    @GetMapping(value = "/planetas/{name}")
+    @GetMapping(value = "/planetas/name/{name}")
     public Planeta listarPlanetaPorNome(@PathVariable(value = "name") String name){
         return planetaRepository.findPlanetaByName(name);
     }
