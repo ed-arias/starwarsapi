@@ -1,11 +1,13 @@
 package com.edarias.test.starwarsapi.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.edarias.test.starwarsapi.models.Planeta;
 import com.edarias.test.starwarsapi.repositories.PlanetaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,5 +33,10 @@ public class PlanetaController {
     @GetMapping(value = "/planetas/{id}")
     public Planeta listarPlanetaPorId(@PathVariable(value = "id") Integer id){
         return planetaRepository.findById(id).get();
+    }
+
+    @DeleteMapping(value = "/planetas/{id}")
+    public void deletarPlanetaPorId(@PathVariable(value = "id") Integer id){
+        planetaRepository.deleteById(id);
     }
 }
