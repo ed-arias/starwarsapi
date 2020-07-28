@@ -39,4 +39,5 @@ public class PlanetaController {
     public void deletarPlanetaPorId(@PathVariable(value = "id") Integer id){
         planetaRepository.deleteById(id);
     }
+    
 }
