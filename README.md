@@ -5,7 +5,7 @@ Este é o repositório do projeto Star Wars API que gerencia os planetas do univ
 
 Algumas considerações:
 
-1. Foi utilizado Spring Boot para implementar o projeto
+1. Foi utilizado Spring Boot na implementação do projeto
 2. Assumi que a quantidade de aparições nos filmes também tinha que ser ingressado manualmente
 3. Na pasta NoSQL tem um comando MongoDB que valida o esquema da coleccao
 4. Utilizei o Spring Data MongoDB que suporta transações síncronas
